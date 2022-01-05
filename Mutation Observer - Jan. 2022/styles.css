@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.parent {
+    width: 90vw;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: rgba(175, 216, 231, 0.5);
+    display: flex;
+    justify-content: space-between;
+    outline: 2px dashed black;
+    height: 250px;
+}
+
+.child {
+    background-color: rgb(240, 127, 129);
+    height: inherit;
+    margin: 0px 2rem;
+    width: 20%;
+    font-size: 2rem;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
