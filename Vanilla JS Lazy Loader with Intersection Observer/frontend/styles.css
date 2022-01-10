@@ -1,0 +1,60 @@
+div{
+    display:block;
+    width: 200px;
+    margin:2rem
+}
+
+.closingDiv{
+    width: 400px;
+    font-weight: bold;
+    font-size: 18px;
+    opacity:0;
+    transform:translateX(200px);
+    animation: fadeIn .5s forwards;
+}
+
+.closingDiv > img{
+    width: 400px
+}
+
+img{
+    display:block;
+    width: 200px;
+    margin-bottom:1rem;
+}
+
+.pokemon {
+    opacity:0;
+    transform:translateX(200px);
+}
+
+.show{
+    opacity:0;
+    transform:translateX(200px);
+    animation: fadeIn .75s forwards;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+
+.imgLoaded{
+    opacity:0;
+    animation: .25s forwards imgFadeIn
+}
+
+@keyframes imgFadeIn {
+    from{
+        opacity: 0
+    }
+    to{
+        opacity:1
+    }
+}
