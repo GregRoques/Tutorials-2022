@@ -1,1 +1,2 @@
 - [Video](https://www.youtube.com/watch?v=ZVug65gW-fc)
+- [JSON placeholder text](https://jsonplaceholder.typicode.com/)
