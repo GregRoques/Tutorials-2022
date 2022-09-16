@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@100&display=swap');
+
+body {
+    font-family: 'Lato', 'Roboto', sans-serif;
+    background: #131316;
+    color: #ffffff;
+    padding: 0;
+    margin: 0
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.logos {
+    display: flex;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 1.5rem;
+    object-fit: cover;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0)
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
