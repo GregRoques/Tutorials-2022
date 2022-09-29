@@ -60,7 +60,6 @@ const router = () => {
   const path = parseLocation();
   const { component = ErrorComponent } =
     findComponentByPath(path, routes) || {};
-
   document.getElementById("app").innerHTML = component.render();
 };
 window.addEventListener("hashchange", router);
