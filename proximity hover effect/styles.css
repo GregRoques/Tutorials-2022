@@ -14,14 +14,12 @@ main {
 
 #eyes,
 #eyes .eye {
-
     position: absolute;
 }
 
 .eye {
-    color: black;
-    background-color: white;
-    width: 10px;
-    height: 10px;
+    background-color: black;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
 }
