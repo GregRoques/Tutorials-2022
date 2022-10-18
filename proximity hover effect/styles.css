@@ -13,13 +13,6 @@ main {
 }
 
 #eyes,
-#eyes .eye {
+#eyes img {
     position: absolute;
-}
-
-.eye {
-    background-color: black;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
 }

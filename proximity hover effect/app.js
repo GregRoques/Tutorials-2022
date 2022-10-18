@@ -20,7 +20,7 @@ document.addEventListener("mousemove", (e) => {
 function angle(cx, cy, ex, ey) {
   const degreeY = ey - cy;
   const degreeX = ex - cx;
-  const radius = Math.atan2(degreeX, degreeY);
+  const radius = Math.atan2(degreeY, degreeX);
   //The Math.atan2() method measures the counterclockwise angle θ, in radians, between the positive x-axis and the point (x, y).
   // Note that the arguments to this function pass the y-coordinate first and the x-coordinate second.
   const degree = (radius * 180) / Math.PI;
