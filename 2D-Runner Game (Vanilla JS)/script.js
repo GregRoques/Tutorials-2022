@@ -31,6 +31,12 @@ class Player {
       }
     );
   }
+  getPlayerPosition(){
+    return this.position;
+  }
+  getGameOverStatus(){
+    return this.isGameOver;
+  }
   setGameOver() {
     this.isGameOver = true;
     player.style.backgroundImage =
@@ -88,18 +94,14 @@ function newEnemy(player) {
   const gameBox = document.getElementById("gameBox");
   gameBox.append(enemy);
   let enemyTimer = setInterval(() => {
-    const getPlayerPosition = document.getElementById("player");
-    let playerPosition = parseInt(
-      getPlayerPosition.style.bottom.replace("px", "")
-    );
-    console.log(playerPosition);
+    const playerPosition = player.getPlayerPosition()
     if (enemyPosition > 0 && enemyPosition < 60 && playerPosition < 60) {
       clearInterval(enemyTimer);
       gameBox.removeChild(enemy);
       player.setGameOver(true);
       return;
     }
-    if (enemyPosition <= 0 || player.isGameOver) {
+    if (enemyPosition <= 0) {
       clearInterval(enemyTimer);
       gameBox.removeChild(enemy);
     }
@@ -117,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function getEnemy() {
     let randomTime = Math.random() * 4000;
     setTimeout(() => {
-      if (!player.isGameOver) {
+      if (!player.getGameOverStatus()) {
         randomTime = Math.random() * 4000;
         newEnemy(player);
         setTimeout(getEnemy, randomTime);
