@@ -5,7 +5,7 @@ let noSubmit = false;
 
 chatGPT.addEventListener("submit", e=>{
     e.preventDefault();
-    if(noSubmit){
+    if(noSubmit || prompt.value.trim() == ""){
         return false;
     };
     noSubmit = true;
