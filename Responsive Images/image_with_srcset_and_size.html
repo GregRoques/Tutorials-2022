@@ -1,0 +1,32 @@
+<!-- GREAT FOR PERFORMANCE AS IT GOES BY RESOLUTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Tutorial</title>
+    <!-- https://www.youtube.com/watch?v=fp9eVtkQ4EA -->
+</head>
+<body style="margin:0">
+    <img style="width:50vw" src="https://placehold.co/1600x400/png"
+        sizes="50w"
+        srcset="https://placehold.co/400x100/png 400w, https://placehold.co/800x200/png 800w, https://placehold.co/1600x400/png 1600w" />
+
+        <!-- EXAMPLE BELOW USES MEDIA QUERIES IN IMG SIZES ATTRIBUTE -->
+        <!-- <img style="width:50vw" src="https://placehold.co/1600x400/png"
+        sizes="(max-width: 500px) 50vw, (max-width: 800px) 100vw, 1200px"
+        srcset="https://placehold.co/400x100/png 400w, https://placehold.co/800x200/png 800w, https://placehold.co/1600x400/png 1600w" /> -->
+
+    <div style="font-size:5vw" id="data"></div>
+    <script>
+        window.addEventListener("resize", updateText);
+        updateText();
+        
+        function updateText(){
+            const data = document.querySelector("#data");
+            data.textContent = `Width: ${window.innerWidth}, Ratio: ${window.devicePixelRatio}`
+        }
+    </script>
+</body>
+</html>

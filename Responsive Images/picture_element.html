@@ -1,0 +1,17 @@
+<!-- BETTER FOR DIFFERENT IMAGES AT DIFFERENT SIZES... LESS PERFORMANT AS IMG WITH SRCSET AS THAT GOES BY RESOLUTION RATHER THAN JUST SIZE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <picture>
+        <source media="(max-width: 500px)"
+        srcset="https://images.pexels.com/photos/1032658/pexels-photo-1032658.jpeg?cs=srgb&dl=pexels-travis-rupert-1032658.jpg&fm=jpg">
+        <img src="https://isardasorensen.files.wordpress.com/2016/05/tp-stunning-sunset-wide-5-24-16.jpg" style="width:600px"/>
+    </picture>
+</body>
+</html>
